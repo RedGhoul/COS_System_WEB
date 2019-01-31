@@ -77,3 +77,7 @@ _[Ss]cripts
 .vs/HHAM/v15/Server/sqlite3/db.lock
 .vs/HHAM/v15/Server/sqlite3/storage.ide
 .vs/HHAM/v15/Server/sqlite3/storage.ide-wal
+HHAM/Properties/PublishProfiles/HHAM - Web Deploy.pubxml
+HHAM/Web.config
+HHAM/Web.Debug.config
+HHAM/Web.Release.config

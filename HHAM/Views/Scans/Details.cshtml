@@ -1,0 +1,52 @@
+﻿@model HHAM.Models.Scan
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" style="padding-top:20px;">
+    <hr />
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Original Scan</h5>
+                    <p class="card-text"></p>
+                    <a href="@Model.RAW_URL" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Processed Scan</h5>
+                    <p class="card-text"></p>
+                    <a href="@Model.RAW_URLProcessed" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Name: @Html.DisplayFor(model => model.Name)</h3>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b>Date Added:</b> @Model.DateAdded.Date.ToString("dd MMM yyyy")</li>
+                    <li class="list-group-item"><b>Description:</b> @Html.DisplayFor(model => model.Notes)</li>
+                </ul>
+                <div class="card-body">
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-lg btn-primary text-uppercase" })
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
